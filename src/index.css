@@ -181,3 +181,33 @@ input{
   justify-content: center;
   margin-top: 3rem;
 }
+
+#home{
+  height: 100%;
+  width: 100%;
+}
+
+#home h1{
+  text-align: center;
+}
+
+#inputBox{
+  height: 100%;
+  width: 100%;
+}
+
+#inputBox input{
+  font-size: 1.10rem;
+  padding-left: 1rem;
+}
+
+button{
+  height: 3rem;
+  width: auto;
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 1rem;
+  color: #000;
+  font-size: 1rem;
+  margin-left: 1rem;
+}

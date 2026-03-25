@@ -7,13 +7,14 @@ import New from "./Pages/New"
 import './App.css'
 
 function App() {
+  let [notes,setNotes] = useState([]);
 
   return (
    <>
    <Routes>
       <Route path="/" element={<NotesApp />}>
-        <Route index element={< Home/>} />
-        <Route path="new" element={<New />} />
+        <Route index element={< Home notes={notes}/>} />
+        <Route path="new" element={<New setNotes={setNotes} />} />
         {/* <Route path="*" element={<NotFound />} /> */}
       </Route>
     </Routes>

@@ -5,6 +5,8 @@ import NotesContainer from "./NotesContainer";
 export default function NotesApp(){
     return(<div id="notesApp">
         <Navbar/>
-        <Outlet/>
+        <div id="notesContainer">
+            <Outlet/>
+        </div>
         </div>)
 }

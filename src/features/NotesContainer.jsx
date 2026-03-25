@@ -1,15 +1,17 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 import NotesCard from "../components/NotesCard";
+import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
-export default function NotesContainer(){
-    let [notes,setNotes] = useState([]);
+
+export default function NotesContainer({setNotes}){
+    const navigate = useNavigate();
     let [currNotes,setCurrNotes] = useState("");
 
     let handleNotes = (e) => {
         console.log(e.target.value)
-        console.log("notes",notes)
         setCurrNotes(e.target.value);
     }
 
@@ -19,13 +21,11 @@ export default function NotesContainer(){
         } )
 
         setCurrNotes("");
+        navigate("/")
     }
     
-    return(<div id="notesContainer">
+    return(<div id="inputBox">
         <input type="text" placeholder="notes" onChange={handleNotes} value={currNotes}/>
         <button onClick={addNotes}>Add</button>
-
-
-        <NotesCard notes={notes} />
     </div>)
 }
