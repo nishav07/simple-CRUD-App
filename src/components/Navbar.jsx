@@ -1,4 +1,5 @@
 import "../index.css"
+import { Link } from "react-router-dom";
 
 export default function Navbar(){
     return(<div id="navbar">
@@ -10,8 +11,8 @@ export default function Navbar(){
         </div>
 
         <ul>
-            <li><a href="">Add</a></li>
-            <li><a href="">Theme</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/new">Add</Link></li>
             <li><a href="">filter</a></li>
         </ul>
     </div>)
