@@ -176,20 +176,22 @@ input{
   min-height: 500px;
   width: 100%;
   background: #000000;
+  margin-top: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 3rem;
 }
 
 #home{
   height: 100%;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem;
 }
 
-#home h1{
-  text-align: center;
-}
 
 #inputBox{
   height: 100%;
@@ -210,4 +212,36 @@ button{
   color: #000;
   font-size: 1rem;
   margin-left: 1rem;
+}
+
+#notesCard{
+  height: auto;
+  min-height: 5rem;
+  width: 40%;
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+}
+
+#card{
+  height:auto;
+  background-color: rgb(255, 255, 255);
+}
+
+#card h1{
+  font-size: 1rem;
+  font-family: monospace;
+  font-weight: 600;
+  color: #000;
+}
+
+#new{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
