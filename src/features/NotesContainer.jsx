@@ -17,7 +17,7 @@ export default function NotesContainer({setNotes}){
 
     let addNotes = () => {
         setNotes((prev) => {
-            return [...prev,{note:currNotes,id:uuidv4()}]
+            return [...prev,{note:currNotes,id:uuidv4(),isPinned:false}]
         } )
 
         setCurrNotes("");

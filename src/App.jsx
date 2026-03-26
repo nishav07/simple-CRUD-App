@@ -15,6 +15,17 @@ function App() {
     setNotes((prev) => prev.filter((note) => note.id != id))
   }
 
+  let pinFx = (id) => {
+    setNotes((prev) => prev.map((val) => {
+      if(val.id == id){
+        return {...val,isPinned:!val.isPinned}
+      } else {
+        return val
+      }
+  }))
+  }
+
+  
   return (
    <>
    <Routes>

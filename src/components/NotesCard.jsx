@@ -12,6 +12,8 @@ export default function NotesCard({notes,delFunx}){
                     console.log('id',note)
                     delFunx(note.id)
                     }} class="fa-solid fa-delete-left"></i>
+
+                    <i class="fa-solid fa-thumbtack"></i>
             </div>
         </div> )) }
     </div>)
