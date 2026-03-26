@@ -215,24 +215,28 @@ button{
 }
 
 #notesCard{
-  height: auto;
-  min-height: 5rem;
-  width: 40%;
+  height: 95%;
+  width: 95%;
   background-color: white;
   padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 1rem;
+  flex-direction: column;
 }
 
 #card{
-  height:auto;
-  background-color: rgb(255, 255, 255);
+  height:5rem;
+  width:100%;
+  background-color: rgb(201, 183, 183);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #card h1{
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-family: monospace;
   font-weight: 600;
   color: #000;
@@ -244,4 +248,18 @@ button{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#btns{
+  height: 100%;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#btns i{
+  font-size: 1.5rem;
+  color: #000;
 }
