@@ -10,6 +10,18 @@ import './App.css'
 
 function App() {
   let [notes,setNotes] = useState([]);
+  let [searchQ,setSearchQ] = useState("");
+  let [isOpen,setIsOpen] = useState("");
+
+  let filteredNotes = notes.filter((val) => {
+    console.log("search query hai",searchQ,"value hai",val,"notes hahi",val.note)
+    if(searchQ === ""){
+      return false
+    } else{
+      return val.note.toLowerCase().includes(searchQ.toLowerCase())
+    }
+    
+  })
 
   const sortedNotes = [...notes].sort((a, b) => b.isPinned - a.isPinned);//sort fx mai a-b return acendinga ndn b-a deceing and yah 1(true)
 //true chaiye uper then false(0) chhaiye neeeche so hum b-a kr rhe haiiii
@@ -33,7 +45,7 @@ function App() {
   return (
    <>
    <Routes>
-      <Route path="/" element={<NotesApp />}>
+      <Route path="/" element={<NotesApp handler={setSearchQ} setIsOpen={setIsOpen} isOpen={isOpen} filteredNotes={filteredNotes}/>}>
         <Route index element={< Home notes={sortedNotes} delFunx={deleteFunc} pinFunx={pinFx}/>} />
         <Route path="/new" element={<New setNotes={setNotes} />} />
         <Route path="/edit/:id" element={<Edit setNotes={setNotes}/>}/>
