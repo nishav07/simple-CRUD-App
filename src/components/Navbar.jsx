@@ -1,7 +1,7 @@
 import "../index.css"
 import { Link } from "react-router-dom";
 
-export default function Navbar({handler,setIsOpen,isOpen}){
+export default function Navbar({handler,setIsOpen}){
 
     return(<div id="navbar">
         <h1>WeNote</h1>
@@ -16,7 +16,6 @@ export default function Navbar({handler,setIsOpen,isOpen}){
         <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/new">Add</Link></li>
-            <li><a href="">filter</a></li>
         </ul>
     </div>)
 }

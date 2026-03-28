@@ -18,7 +18,10 @@ function App() {
     if(searchQ === ""){
       return false
     } else{
-      return val.note.toLowerCase().includes(searchQ.toLowerCase())
+      return val.note.toLowerCase().startsWith(searchQ.toLowerCase())
+
+      //startsWIth() starting ka word check return krta hai
+      //includes() pure bich ke string ko check krta hai
     }
     
   })
